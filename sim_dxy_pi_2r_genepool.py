@@ -3,12 +3,12 @@
 
 import re
 
-chrm = 'X'
-sample_size = [143, 18, 8, 11, 17, 41, 31, 31, 12] # I am hard coding this, but could be obtained from ms command line -I flag
+chrm = '2R'
+sample_size = [132, 19, 9, 11, 38, 6, 26] # I am hard coding this, but could be obtained from ms command line -I flag
 
 
 
-n_sites = 100 * (2000000-1)
+n_sites = 100 * (2000000-18)
 
 output_dxy_counts = open('chr'+chrm+'_sim_dxy.csv','w')
 output_pi_pops = open('chr'+chrm+'_sim_pi.csv','w')
