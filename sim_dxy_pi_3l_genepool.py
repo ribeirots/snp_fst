@@ -46,7 +46,7 @@ for i in range(0,len(sample_size)-1):
                     else:
                         minor_f1 = float(n1 - line[i])/n1
                         minor_f2 = float(n2 - line[k])/n2
-                    if minor_f1 != 0 and minor_f2 != 0:
+                    if minor_f1 != 0 or minor_f2 != 0:
                         major_f1 = 1 - minor_f1
                         major_f2 = 1 - minor_f2
                         dxy_count = (major_f1 * minor_f2) + (major_f2 * minor_f1)
