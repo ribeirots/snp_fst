@@ -15,10 +15,11 @@ site_counts = []
 output = open('snpData_'+pop1+'_'+pop2+'.csv','w')
 
 beginning_of_line = "-A-\t-T-\tC\ẗ́"
-
 middle_of_line = "\tG\t"
-
 ending_of_line = "\tabcd1\t"
+first_line = 'ref\toutg\tAllele1\tpop1\tpop2\tAllele2\tpop1\tpop2\tGene\tPosition\n'
+
+output.write(first_line)
 
 with open('AllCounts_'+pop1+"_"+pop2+'_Chr'+chrm+'.txt') as two_pops:
     pos_count = 0
@@ -54,7 +55,7 @@ with open('AllCounts_'+pop1+"_"+pop2+'_Chr'+chrm+'.txt') as two_pops:
                 bi_allele2[1] = n_cutoff2 - bi_allele2[0]
                 bi_allele2.sort()
 
-                line_output = beginning_of_line + str(bi_allele1[0]) + "\t" + str(bi_allele1[1]) + middle_of_line + str(bi_allele2[0]) + "\t" + str(bi_allele2[1]) + ending_of_line + "\t" + str(pos_count) + "\n"
+                line_output = beginning_of_line + str(bi_allele1[0]) + "\t" + str(bi_allele2[0]) + middle_of_line + str(bi_allele1[1]) + "\t" + str(bi_allele2[1]) + ending_of_line + "\t" + str(pos_count) + "\n"
                 output.write(line_output)
 output.close()
 
