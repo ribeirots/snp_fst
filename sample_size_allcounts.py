@@ -5,13 +5,8 @@ import re
 
 #import numpy as np
 
-site_counts = []
-
 pops = ['CO','EA','EF','EG','FR','KF','RG','SD','ZI']
-chrm = ['X','2L','2R','3L','3R']
-
-output = open('empirical_sample_sizee.csv','w')
-
+chrm = ['X','2R','3L']
 
 for pop in pops:
     for arm in chrm:
