@@ -34,6 +34,8 @@ To compare simulated and empirical data I am currently using chi-square test in 
 
 *At a closer inspection, ratio differences only seems very different for FR. I will investigate population labeling issues.*
 
+I will exemply the pipeline using only ChrX as example. The first step is to run *chrX.sh*, this file run the ms command with the simulation parameters based on chromosome X inferences and sampling size. The ms output is called _9PopChrX\_ms.txt_. Then, you it also runs freq\_output\_ms_X.py. This python script will calculate allele frequencies for all the alleles based on the ms output. For each simulation, it checks if all the rows (individuals) have been generated corrected and then feeds the simulation data to a function that loops through it calculating allele frequencies for the SNPs in that simulation. The script loops this step until the last population is analyzed and produces two outputs: (1) ChrX\_Results.txt, the file with the allele frequencies, and (2) an visual output only, contaning the number of simulations that were successfully analyzed - which is relevant in the next step.
+
 #### Troubleshooting
 
 We simulated 2 populations with constant population size to ensure that our scripts were retrieving expected pi values, which we compared to pi values from JEP's population genetics class as well. My scripts are available in this page and the results were the same between both approaches and matched the expected pi, suggesting our scripts are working well.
