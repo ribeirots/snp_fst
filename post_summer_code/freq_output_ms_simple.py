@@ -2,14 +2,14 @@
 
 import re 
 
-output = open("2Pop_Results.txt", "w")
-sample_pop = [200, 200]
+output = open("freq_simple_ms.txt", "w")
+sample_pop = 50
 
 
 
 def pop_summary(simulations,Ne):
 
-    pop = Ne
+    pop = [Ne]
 
     pop_lines = []
     j = 0
@@ -23,14 +23,15 @@ def pop_summary(simulations,Ne):
         pop_lines.append(sample_lines) # Each vector is a vector with all lines for a pop
 
     count = []
+    
 
     for samples in pop_lines:
-        z = [len(samples)]
-        for i in range(0, len(samples[0])):
+        z = [len(samples)] # number of rows from each pop
+        for i in range(0, len(samples[0])): # number of columns
             z.append(0) # z starts with 0s for all sites, len(z) = number of sites in a given simulation
         for line in samples:
             line2 = line
-            line2 = [line[i:i+1] for i in range(0, len(line), 1)]
+            line2 = [line[i:i+1] for i in range(0, len(line), 1)] #spliting str into characters to then convert to int
             line2 = list(map(int, line2))
 
             for j in range(0, len(samples[0])):
@@ -41,6 +42,8 @@ def pop_summary(simulations,Ne):
     invert_count = []
 
     for k in range(0, len(count[0])):
+	print(len(count[0]))
+	print(count[0])
         invert_line = []
         for line in count:
             invert_line.append(line[k])
@@ -52,7 +55,7 @@ def pop_summary(simulations,Ne):
 
 
 
-with open("2Pop_dummy_ms.txt", "r") as file:
+with open("simple_ms.txt", "r") as file:
     next(file)
     next(file)
     lines = []
@@ -60,7 +63,7 @@ with open("2Pop_dummy_ms.txt", "r") as file:
     for line in file:
         if len(line) == 1: #line = \n
             line = line
-            lines = []
+	    lines = []
         elif line[0] == '/':
             line = line
         elif line[0] == 's':
@@ -69,7 +72,7 @@ with open("2Pop_dummy_ms.txt", "r") as file:
             line = line
         elif line[0] == '0' or line[0] == '1':
             lines.append(line)
-        if len(lines) == sum(sample_pop):
+	if len(lines) == sample_pop:
             ps = pop_summary(lines, sample_pop)
             for site in ps:
                 output.write(site)

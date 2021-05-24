@@ -2,8 +2,8 @@
 
 import re 
 
-output = open("Chr3L_Results.txt", "w")
-sample_pop = [124, 22, 8, 10, 5, 29, 10, 24]
+output = open("Chr2R_Results.txt", "w")
+sample_pop = [132, 19, 9, 11, 38, 6, 26]
 
 
 
@@ -52,7 +52,7 @@ def pop_summary(simulations,Ne):
 
 
 
-with open("8PopChr3L_ms.txt", "r") as file:
+with open("7PopChr2R_ms.txt", "r") as file:
     next(file)
     next(file)
     lines = []
