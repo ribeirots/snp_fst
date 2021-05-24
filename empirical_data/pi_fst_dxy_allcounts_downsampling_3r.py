@@ -6,7 +6,7 @@ import re, random
 import numpy as np
 
 site_counts = []
-min_allele_count = 1 # combined counts from both population - only used for FST and dxy
+min_allele_count = 3 # combined counts from both population - only used for FST and dxy
 
 #pops = ['EF','FRht','RG','SD','ZI'] # 'CO','EA', EG not used due to low sample size
 pops = ['SD','ZI']
