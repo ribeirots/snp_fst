@@ -27,7 +27,9 @@ def sim_recomb_list(model,recrate_dir, recrate_file,chrm, p1_code, p2_code, repl
                 for line in file_sims:
                     if line[0] != 'n' and line[0] != 'M':
                         line = line.split()
-                        if int(line[5]) in poppair and int(line[6]) in poppair:
+                        if 'winFST' in line:
+                            print(line)
+                        elif int(line[5]) in poppair and int(line[6]) in poppair:
                             if first_reading == 1:
                                 first_reading = 0
                                 snp_dict[key_dict] = []
