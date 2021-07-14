@@ -13,7 +13,7 @@
 
 import re, sys
 
-go_gene_cats = 0
+go_gene_cats = 1
 update_go_desc=1
 
 if len(sys.argv) < 2:
