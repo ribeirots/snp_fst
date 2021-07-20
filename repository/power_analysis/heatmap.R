@@ -16,15 +16,12 @@ heatmap_power_gg <- function(dset, varX, varY, varFill, varTitle, xLabel, yLabel
   gg_heatmap <- ggplot(dset, aes_string(varX, varY, fill=varFill)) + geom_tile() + scale_fill_viridis_c(option="cividis", direction=-1, name="Power") + 
     theme_light() + ggtitle(varTitle) + theme(axis.text = element_text(size = 15)) + theme(axis.title = element_text(size = 25)) +
     theme(plot.title = element_text(size=22)) + xlab(xLabel) + ylab(yLabel) + 
-    geom_text(aes_string(label=varFill, size=2, colour=shQuote("white"), fontface = shQuote('bold')), show.legend=F)
+    geom_text(aes_string(label=varFill, size=2, fontface = shQuote('bold')), color=ifelse(dset[,3]>0.4,"white","black"), show.legend=F)
   
   figname = varFigname
   ggsave(filename=figname, plot = gg_heatmap, width = 10, height = 8, dpi = 150, units = "in", device='jpeg')
   return(gg_heatmap)
 }
-
-gg_inc_fst_ss <- heatmap_power_gg(inc_fst_ss, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
-gg_inc_fst_ss
 
 complete_fst <- read.csv('complete_fst.txt', sep='\t')[,1:3] # ModelID, SNP_FST, winFST
 incomplete_fst <- read.csv('incomplete_fst.txt', sep='\t')[,1:3] # ModelID, SNP_FST, winFST
