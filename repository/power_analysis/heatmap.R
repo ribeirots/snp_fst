@@ -55,7 +55,7 @@ for (i in 1:length(incomplete_fst_ss$ModelID)){
 inc_fst_ss <- data.frame(inc_fst_ss)
 names(inc_fst_ss) <- c('init_Freq', 'final_Freq', 'power')
 inc_fst_ss$power <- as.numeric(inc_fst_ss$power)
-plot_title = expression(italic(F[ST - MaxSNP])~" - Incomplete Sweep - High"~ italic(N[e])~" (s=0.01)")
+plot_title = expression(italic(F[ST - MaxSNP])~" - Partial sweep - High"~ italic(N[e])~" (s=0.01)")
 plot_name = 'inc_hn_ss_snp.jpg'
 gg_inc_fst_ss <- heatmap_power_gg(inc_fst_ss, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_fst_ss
@@ -72,7 +72,7 @@ for (i in 1:length(incomplete_fst_ss$ModelID)){
 inc_fst_ss_win <- data.frame(inc_fst_ss_win)
 names(inc_fst_ss_win) <- c('init_Freq', 'final_Freq', 'power')
 inc_fst_ss_win$power <- as.numeric(inc_fst_ss_win$power)
-plot_title = expression(italic(F[ST - Window])~" - Incomplete Sweep - High"~ italic(N[e])~" (s=0.01)")
+plot_title = expression(italic(F[ST - Window])~" - Partial sweep - High"~ italic(N[e])~" (s=0.01)")
 plot_name = 'inc_hn_ss_win.jpg'
 gg_inc_fst_ss_win <- heatmap_power_gg(inc_fst_ss_win, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_fst_ss_win
@@ -90,7 +90,7 @@ inc_chi_ss <- data.frame(inc_chi_ss)
 names(inc_chi_ss) <- c('init_Freq', 'final_Freq', 'power')
 inc_chi_ss$power <- as.numeric(inc_chi_ss$power)
 #plot_title = 'CHI - Incomplete Sweep - HN (s=0.01)'
-plot_title = expression(italic("\u03A7"[MD])~" - Incomple Sweep - High"~ italic(N[e])~" (s=0.01)")
+plot_title = expression(italic("\u03A7"[MD])~" - Partial sweep - High"~ italic(N[e])~" (s=0.01)")
 plot_name = 'inc_hn_ss_chi.jpg'
 gg_inc_chi_ss <- heatmap_power_gg(inc_chi_ss, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_chi_ss
@@ -108,7 +108,7 @@ for (i in 1:length(incomplete_fst_ws$ModelID)){
 inc_fst_ws <- data.frame(inc_fst_ws)
 names(inc_fst_ws) <- c('init_Freq', 'final_Freq', 'power')
 inc_fst_ws$power <- as.numeric(inc_fst_ws$power)
-plot_title = expression(italic(F[ST - MaxSNP])~" - Incomple Sweep - High"~ italic(N[e])~" (s=0.001)")
+plot_title = expression(italic(F[ST - MaxSNP])~" - Partial sweep - High"~ italic(N[e])~" (s=0.001)")
 plot_name = 'inc_hn_ws_snp.jpg'
 gg_inc_fst_ws <- heatmap_power_gg(inc_fst_ws, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_fst_ws
@@ -125,7 +125,7 @@ for (i in 1:length(incomplete_fst_ws$ModelID)){
 inc_fst_ws_win <- data.frame(inc_fst_ws_win)
 names(inc_fst_ws_win) <- c('init_Freq', 'final_Freq', 'power')
 inc_fst_ws_win$power <- as.numeric(inc_fst_ws_win$power)
-plot_title = expression(italic(F[ST - Window])~" - Incomple Sweep - High"~ italic(N[e])~" (s=0.001)")
+plot_title = expression(italic(F[ST - Window])~" - Partial sweep - High"~ italic(N[e])~" (s=0.001)")
 plot_name = 'inc_hn_ws_win.jpg'
 gg_inc_fst_ws_win <- heatmap_power_gg(inc_fst_ws_win, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_fst_ws_win
@@ -142,7 +142,7 @@ for (i in 1:length(incomplete_chi_ws$ModelID)){
 inc_chi_ws <- data.frame(inc_chi_ws)
 names(inc_chi_ws) <- c('init_Freq', 'final_Freq', 'power')
 inc_chi_ws$power <- as.numeric(inc_chi_ws$power)
-plot_title = expression(italic("\u03A7"[MD])~" - Incomple Sweep - High"~ italic(N[e])~" (s=0.001)")
+plot_title = expression(italic("\u03A7"[MD])~" - Partial sweep - High"~ italic(N[e])~" (s=0.001)")
 plot_name = 'inc_hn_ws_chi.jpg'
 gg_inc_chi_ws <- heatmap_power_gg(inc_chi_ws, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_chi_ws
@@ -161,7 +161,7 @@ for (i in 1:length(incomplete_fst_LN$ModelID)){
 inc_fst_ln <- data.frame(inc_fst_ln)
 names(inc_fst_ln) <- c('init_Freq', 'final_Freq', 'power')
 inc_fst_ln$power <- as.numeric(inc_fst_ln$power)
-plot_title = expression(italic(F[ST - MaxSNP])~" - Incomple Sweep - Low"~ italic(N[e])~" (s=0.01)")
+plot_title = expression(italic(F[ST - MaxSNP])~" - Partial sweep - Low"~ italic(N[e])~" (s=0.01)")
 plot_name = 'inc_ln_snp.jpg'
 gg_inc_fst_ln <- heatmap_power_gg(inc_fst_ln, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_fst_ln
@@ -180,7 +180,7 @@ for (i in 1:length(incomplete_fst_LN$ModelID)){
 inc_fst_ln_win <- data.frame(inc_fst_ln_win)
 names(inc_fst_ln_win) <- c('init_Freq', 'final_Freq', 'power')
 inc_fst_ln_win$power <- as.numeric(inc_fst_ln_win$power)
-plot_title = expression(italic(F[ST - Window])~" - Incomple Sweep - Low"~ italic(N[e])~" (s=0.01)")
+plot_title = expression(italic(F[ST - Window])~" - Partial sweep - Low"~ italic(N[e])~" (s=0.01)")
 plot_name = 'inc_ln_win.jpg'
 gg_inc_fst_ln_win <- heatmap_power_gg(inc_fst_ln_win, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_fst_ln_win
@@ -197,7 +197,7 @@ for (i in 1:length(incomplete_chi_LN$ModelID)){
 inc_chi_ln <- data.frame(inc_chi_ln)
 names(inc_chi_ln) <- c('init_Freq', 'final_Freq', 'power')
 inc_chi_ln$power <- as.numeric(inc_chi_ln$power)
-plot_title = expression(italic("\u03A7"[MD])~" - Incomple Sweep - Low"~ italic(N[e])~" (s=0.01)")
+plot_title = expression(italic("\u03A7"[MD])~" - Partial sweep - Low"~ italic(N[e])~" (s=0.01)")
 plot_name = 'inc_ln_chi.jpg'
 gg_inc_chi_ln <- heatmap_power_gg(inc_chi_ln, 'init_Freq', 'final_Freq', 'power', plot_title, "Starting Frequency", "Ending Frequency", plot_name)
 gg_inc_chi_ln
