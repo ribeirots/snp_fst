@@ -13,7 +13,7 @@
 
 import re, sys
 
-go_gene_cats = 0
+go_gene_cats = 1
 update_go_desc=1
 
 if len(sys.argv) < 2:
@@ -125,7 +125,7 @@ if update_go_desc:
         print('Searching for new GO terms to add to the updated file.\n')
         for row in goobofile:
             if get_name_p_key == 1:
-                row = re.split(':',row[:-1])
+                row = re.split(': ',row[:-1])
                 if row[0] == 'name':
                     term_to_add.append(row[1])
                 elif row[0] == 'namespace':
