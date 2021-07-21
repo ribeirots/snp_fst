@@ -1,0 +1,4 @@
+# This is just an example of how I use xargs to parallelize commands on a machine with more than 50 processors.
+
+cat chi_neutral.txt | xargs -I CMD --max-procs=50 bash -c CMD
+
